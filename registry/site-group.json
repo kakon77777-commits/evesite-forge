@@ -1,0 +1,23 @@
+{
+  "$schema": "https://evemisslab.com/schemas/evesite-site-group-v0.1.schema.json",
+  "id": "evesite-forge-reference-network",
+  "title": "EveSite Forge Reference Network",
+  "version": "0.1.0",
+  "updated": "2026-07-23",
+  "sites": [
+    {
+      "id": "theory-interface",
+      "type": "theory-interface",
+      "title": "The Interface Transformation of Theory",
+      "path": "sites/theory-interface/",
+      "status": "reference"
+    },
+    {
+      "id": "gwsm",
+      "type": "theory-interface",
+      "title": "Game Wave Semantic Model",
+      "path": "sites/gwsm/",
+      "status": "reference"
+    }
+  ]
+}
