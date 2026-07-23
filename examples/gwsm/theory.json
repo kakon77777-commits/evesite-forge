@@ -1,0 +1,87 @@
+{
+  "project": {
+    "title": "Game Wave Semantic Model",
+    "short_title": "GWSM",
+    "version": "0.1",
+    "date": "2026-07-23",
+    "status": "公開研究草案",
+    "authors": ["Neo.K（許筌崴）"],
+    "organization": "EveMissLab／一言諾科技有限公司",
+    "language": "zh-Hant"
+  },
+  "thesis": {
+    "headline": "讓遊戲世界不只被腳本觸發，而能以波、狀態、關係與事件共同演化。",
+    "summary": "GWSM 保留離散事實，同時加入週期、延遲、記憶、阻尼、漂移、耦合與事件結晶，使經濟、派系、生態、情緒與敘事能在同一個世界模型中互相作用。",
+    "problem": "複雜遊戲系統被拆成大量互不相干的旗標、計時器與腳本。",
+    "method": "建立離散事實、連續狀態、波動通道、耦合、事件與約束的混合語意模型。",
+    "goal": "先讓人類可觀察與控制，再逐步開放 AI 的受限自適應。"
+  },
+  "evidence": {
+    "level": "L2",
+    "label": "互動示範",
+    "disclaimer": "目前網站只驗證理論介面與簡化動態，不代表完整 Runtime、外部實證或真實社會預測。"
+  },
+  "sections": [
+    {"id":"concepts","title":"為何需要新的遊戲世界語意","kind":"features","description":"網站門面先建立直觀理解，再導向正式模型。","items":[
+      {"title":"混合表示","description":"離散事實與動態通道共同存在，不把所有資料強制波化。"},
+      {"title":"跨系統耦合","description":"經濟、派系、情緒、生態與敘事可以互相影響。"},
+      {"title":"事件結晶","description":"連續壓力跨過門檻後才形成離散事件。"},
+      {"title":"受限自適應","description":"AI 只能在權限、邊界與回滾機制內調整。"}
+    ]},
+    {"id":"explore","title":"城市壓力可操作摘要","kind":"interactive","description":"使用四個簡化變數，測試公開互動層能否表達模型方向。"},
+    {"id":"formal","title":"公共展示與正式模型的差異","kind":"formal","description":"公共層必須明確標出省略內容。"},
+    {"id":"experiments","title":"公開實驗入口","kind":"experiments","description":"預設情境只屬於 L2 互動示範。"},
+    {"id":"documents","title":"文件與權威層","kind":"documents","description":"文件區保存正式理論、限制與設計歷史。"},
+    {"id":"status","title":"研究完成度","kind":"status","description":"直接公開完成、未完成與不能聲稱的內容。"}
+  ],
+  "interactive": {
+    "type": "weighted-risk",
+    "title": "世界控制桿",
+    "description": "簡化城市壓力模型",
+    "threshold": 72,
+    "controls": [
+      {"id":"food","label":"食物短缺","min":0,"max":100,"default":45,"weight":0.28,"description":"生活壓力來源。"},
+      {"id":"anger","label":"群眾憤怒","min":0,"max":100,"default":55,"weight":0.34,"description":"直接事件壓力。"},
+      {"id":"rumor","label":"謠言壓力","min":0,"max":100,"default":35,"weight":0.2,"description":"與憤怒交互作用。"},
+      {"id":"legitimacy","label":"政府正當性","min":0,"max":100,"default":60,"weight":0.18,"invert":true,"description":"越低，風險越高。"}
+    ],
+    "interaction":{"a":"anger","b":"rumor","start":120,"weight":0.18},
+    "presets":[
+      {"id":"stable","label":"穩定城市","values":{"food":15,"anger":20,"rumor":10,"legitimacy":82}},
+      {"id":"harvest","label":"歉收衝擊","values":{"food":78,"anger":58,"rumor":25,"legitimacy":55}},
+      {"id":"resonance","label":"謠言共振","values":{"food":72,"anger":80,"rumor":88,"legitimacy":28}}
+    ]
+  },
+  "formal": {
+    "public_summary":["四個滑桿","單一綜合指標","立即事件回饋","簡化波形"],
+    "formal_additions":["多通道歷史","延遲與多速率耦合","阻尼、漂移與記憶","遲滯、冷卻與事件來源","合法狀態投影","權限與回滾"],
+    "semantic_core":["Entity","Fact","State","Wave","Coupling","Event","Constraint","Timeline","Observation","Adaptation"],
+    "formula":"x(t+1) = Π_C [ F(x_t, e_t, u_t) + Σ_i G_i(w_i(t), x_t, K_t) ]",
+    "formula_note":"離散狀態更新與波動通道共同存在，Π_C 將結果限制於合法世界狀態。"
+  },
+  "experiments":[
+    {"id":"E-001","title":"穩定基線","description":"低短缺、低憤怒、高正當性。","evidence_level":"L2","preset":"stable"},
+    {"id":"E-002","title":"歉收衝擊","description":"單一壓力升高但尚未形成多通道共振。","evidence_level":"L2","preset":"harvest"},
+    {"id":"E-003","title":"謠言共振","description":"多個通道同步升高並跨越事件門檻。","evidence_level":"L2","preset":"resonance"}
+  ],
+  "documents":[
+    {"title":"GWSM v0.1","description":"正式語意模型與 MVP 路線","path":"docs/GWSM_v0.1.md","role":"權威層"},
+    {"title":"Limitations & Unknowns","description":"未完成、未驗證與適用邊界","path":"docs/LIMITATIONS.md","role":"誠實層"}
+  ],
+  "status": {
+    "metrics":[
+      {"label":"最小語意結構","value":"10","note":"完成草案"},
+      {"label":"互動摘要","value":"1","note":"城市壓力案例"},
+      {"label":"正式 Runtime","value":"0","note":"尚未實作"},
+      {"label":"外部驗證","value":"0","note":"尚未開始"}
+    ],
+    "roadmap":[
+      {"title":"理論入口與文件架構","note":"完成草案","state":"done"},
+      {"title":"可操作摘要","note":"本次生成網站","state":"active"},
+      {"title":"固定時間步 Runtime","note":"下一階段"},
+      {"title":"Replay 與 Branch","note":"未開始"},
+      {"title":"AI 受限調參","note":"研究命題"}
+    ]
+  },
+  "limitations":["不能證明 GWSM 優於所有傳統遊戲架構。","不能把網站波形解讀為物理波。","不能把模型歸因解讀為完整因果。","不能聲稱已完成大型世界效能驗證。"]
+}
