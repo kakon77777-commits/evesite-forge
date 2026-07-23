@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://evemisslab.com/schemas/theory-interface-v0.1.schema.json",
+  "title": "Theory Interface Schema",
+  "type": "object",
+  "required": ["project", "thesis", "evidence", "sections", "documents", "status"],
+  "properties": {
+    "project": {
+      "type": "object",
+      "required": ["title", "short_title", "version", "date", "status"],
+      "properties": {
+        "title": {"type": "string"},
+        "short_title": {"type": "string"},
+        "subtitle": {"type": "string"},
+        "version": {"type": "string"},
+        "date": {"type": "string"},
+        "status": {"type": "string"},
+        "authors": {"type": "array", "items": {"type": "string"}},
+        "organization": {"type": "string"},
+        "language": {"type": "string"}
+      }
+    },
+    "thesis": {
+      "type": "object",
+      "required": ["headline", "summary"],
+      "properties": {
+        "headline": {"type": "string"},
+        "summary": {"type": "string"},
+        "problem": {"type": "string"},
+        "method": {"type": "string"},
+        "goal": {"type": "string"}
+      }
+    },
+    "evidence": {
+      "type": "object",
+      "required": ["level", "label", "disclaimer"],
+      "properties": {
+        "level": {"type": "string", "pattern": "^L[0-6]$"},
+        "label": {"type": "string"},
+        "disclaimer": {"type": "string"}
+      }
+    },
+    "sections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "title", "kind"],
+        "properties": {
+          "id": {"type": "string"},
+          "title": {"type": "string"},
+          "kind": {"type": "string", "enum": ["features", "interactive", "formal", "experiments", "documents", "status"]},
+          "description": {"type": "string"},
+          "items": {"type": "array"}
+        }
+      }
+    },
+    "interactive": {
+      "type": "object",
+      "required": ["type"],
+      "properties": {
+        "type": {"enum": ["none", "weighted-risk", "maturity-ladder"]},
+        "title": {"type": "string"},
+        "description": {"type": "string"},
+        "threshold": {"type": "number"},
+        "controls": {"type": "array"},
+        "presets": {"type": "array"},
+        "levels": {"type": "array"}
+      }
+    },
+    "formal": {"type": "object"},
+    "experiments": {"type": "array"},
+    "documents": {"type": "array"},
+    "status": {"type": "object"},
+    "limitations": {"type": "array", "items": {"type": "string"}}
+  }
+}
