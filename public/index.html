@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="EveSite Forge is a schema-driven universal generator for theory sites, product interfaces, documentation portals, observatories, and multi-site systems.">
+  <meta name="theme-color" content="#111713">
+  <title>EveSite Forge — Schema-Driven Universal Site Generator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="EveSite Forge home">
+      <span class="brand-mark" aria-hidden="true">E</span>
+      <span><strong>EveSite Forge</strong><small>Universal Site Generator</small></span>
+    </a>
+    <button class="menu" type="button" aria-expanded="false" aria-controls="nav">選單</button>
+    <nav id="nav">
+      <a href="#system">系統</a>
+      <a href="#references">案例</a>
+      <a href="#governance">治理</a>
+      <a href="#roadmap">路線</a>
+      <a href="https://github.com/kakon77777-commits/evesite-forge">GitHub</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero shell">
+      <div class="hero-copy">
+        <div class="eyebrow"><span>v0.1.0</span><span>Public reference implementation</span></div>
+        <h1>把理論、產品與文件，鍛造成可操作的公共介面。</h1>
+        <p class="lead">EveSite Forge 使用結構化資料、可驗證 Schema、網站類型與互動模組，生成可部署、可分層、可持續治理的網站。</p>
+        <div class="actions">
+          <a class="button primary" href="#references">查看生成案例</a>
+          <a class="button" href="https://github.com/kakon77777-commits/evesite-forge">開啟 Repository</a>
+        </div>
+        <p class="scope"><strong>Current proof:</strong> 同一生成核心已承載兩套不同理論與兩種不同互動模型；這是一個可驗證起點，不是「所有網站已被統一」的宣稱。</p>
+      </div>
+      <div class="forge" aria-label="EveSite Forge pipeline">
+        <article><span>01</span><div><small>Source</small><strong>Structured knowledge</strong></div></article>
+        <i>↓</i>
+        <article><span>02</span><div><small>Contract</small><strong>Schema + site type</strong></div></article>
+        <i>↓</i>
+        <article><span>03</span><div><small>Projection</small><strong>Modules + renderer</strong></div></article>
+        <i>↓</i>
+        <article class="active"><span>04</span><div><small>Interface</small><strong>Deployable website</strong></div></article>
+      </div>
+    </section>
+
+    <section class="band" id="system">
+      <div class="shell section-head">
+        <div><span class="kicker">System</span><h2>不是一個固定模板，而是一組網站生成與治理層。</h2></div>
+        <p>共同骨架處理可重用部分；網站類型保存領域差異；互動模組承載真正需要被操作的模型。</p>
+      </div>
+      <div class="shell grid four">
+        <article class="capability"><span>01</span><h3>Schema</h3><p>把命題、證據、文件、限制與狀態變成可驗證資料。</p></article>
+        <article class="capability"><span>02</span><h3>Site types</h3><p>理論、產品、文件、觀測站與 Catalog 使用不同公共投影。</p></article>
+        <article class="capability"><span>03</span><h3>Modules</h3><p>風險、成熟度、比較、時間線與未來模組可以獨立演化。</p></article>
+        <article class="capability"><span>04</span><h3>Site groups</h3><p>網站群共享分類、導航、版本、語言與權威治理。</p></article>
+      </div>
+    </section>
+
+    <section class="shell section" id="references">
+      <div class="section-head">
+        <div><span class="kicker">Reference sites</span><h2>同一核心，兩種理論介面。</h2></div>
+        <p>兩個案例皆由結構化來源產生，但保留不同的模型、證據聲明與互動邏輯。</p>
+      </div>
+      <div class="grid two">
+        <a class="project-card" href="sites/theory-interface/">
+          <div class="card-top"><span class="tag">Maturity ladder</span><span>Reference 01</span></div>
+          <h3>The Interface Transformation of Theory</h3>
+          <p>展示理論如何從文本存在，逐級轉化成公開門面、可操作摘要、證據介面與持續研究場所。</p>
+          <footer><span>開啟網站</span><b>↗</b></footer>
+        </a>
+        <a class="project-card" href="sites/gwsm/">
+          <div class="card-top"><span class="tag">Weighted risk</span><span>Reference 02</span></div>
+          <h3>Game Wave Semantic Model</h3>
+          <p>以多參數耦合、門檻、事件與歸因介面，展示波、狀態、關係與事件共同演化的遊戲語意模型。</p>
+          <footer><span>開啟網站</span><b>↗</b></footer>
+        </a>
+      </div>
+    </section>
+
+    <section class="band" id="governance">
+      <div class="shell section-head">
+        <div><span class="kicker">Governance</span><h2>生成很便宜，一致性與誠實性才是新的成本。</h2></div>
+        <p>每個公開介面都必須能指出正式來源、證據等級、適用邊界、版本狀態與尚未完成之處。</p>
+      </div>
+      <div class="shell governance">
+        <div class="rule"><strong>Public ≠ Formal</strong><span>門面是投影，不是正式理論的替代品。</span></div>
+        <div class="rule"><strong>Interactive ≠ Proven</strong><span>可操作展示不等於模型已被實證支持。</span></div>
+        <div class="rule"><strong>Generated ≠ Governed</strong><span>能生成網站，不代表已處理版本、責任與漂移。</span></div>
+        <div class="rule"><strong>Shared ≠ Identical</strong><span>共同 Schema 不應抹平不同領域的特殊表達。</span></div>
+      </div>
+    </section>
+
+    <section class="shell section" id="roadmap">
+      <div class="section-head">
+        <div><span class="kicker">Roadmap</span><h2>從理論介面，走向通用網站鍛造場。</h2></div>
+        <p>下一階段將分離 Page、Site 與 Site Group，並擴充產品、文件、觀測站和 Catalog 類型。</p>
+      </div>
+      <ol class="timeline">
+        <li class="done"><span>0.1</span><div><strong>Reference core</strong><p>共同 Schema、兩個互動模組、兩個生成案例、自動部署。</p></div></li>
+        <li><span>0.2</span><div><strong>Site type separation</strong><p>抽出共用頁面、網站與站群契約。</p></div></li>
+        <li><span>0.3</span><div><strong>Content import</strong><p>Markdown 匯入、差異報告與版本漂移檢查。</p></div></li>
+        <li><span>1.0</span><div><strong>Governed generator</strong><p>模組 SDK、多語言、批次站群生成與權威治理。</p></div></li>
+      </ol>
+    </section>
+  </main>
+
+  <footer class="footer shell">
+    <div><strong>EveSite Forge</strong><p>Neo.K（許筌崴） · EveMissLab／一言諾科技有限公司</p></div>
+    <div><span>MIT License</span><span>2026-07-23</span><span>v0.1.0</span></div>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
