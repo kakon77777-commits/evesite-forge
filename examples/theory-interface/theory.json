@@ -1,0 +1,82 @@
+{
+  "project": {
+    "title": "The Interface Transformation of Theory",
+    "short_title": "TIT",
+    "version": "1.0",
+    "date": "2026-07-23",
+    "status": "公開理論草案",
+    "authors": ["Neo.K（許筌崴）"],
+    "organization": "EveMissLab／一言諾科技有限公司",
+    "language": "zh-Hant"
+  },
+  "thesis": {
+    "headline": "理論不再只能被閱讀，也可以被操作、比較、回放與分層查看。",
+    "summary": "理論介面化將同一套知識投影為公共敘事、正式結構、可操作展示、證據狀態與版本歷史。介面不取代論文，而是建立新的知識表面。",
+    "problem": "純文本難以同時呈現動態關係、參數敏感性、版本差異與失敗邊界。",
+    "method": "將理論分成公共、互動、正式、證據、文件與狀態等不同介面。",
+    "goal": "讓理論更容易被理解，也更難隱藏自己的限制。"
+  },
+  "evidence": {
+    "level": "L1",
+    "label": "概念與視覺模型",
+    "disclaimer": "本網站展示的是理論介面化方法論與成熟度模型，不是對所有研究出版形式的實證結論。"
+  },
+  "sections": [
+    {"id":"concepts","title":"理論介面化的四個轉變","kind":"features","description":"從單一文本轉向多層知識表面。","items":[
+      {"title":"從閱讀到操作","description":"讀者能改變條件並觀察模型回應。"},
+      {"title":"從摘要到可操作摘要","description":"核心命題、互動、限制與文件入口共同構成摘要。"},
+      {"title":"從門面到權威分層","description":"網站入口與正式理論保持分離。"},
+      {"title":"從製作門檻到治理門檻","description":"真正稀缺轉向一致性、證據與版本責任。"}
+    ]},
+    {"id":"explore","title":"理論介面成熟度","kind":"interactive","description":"調整成熟度，觀察理論網站從文本入口演化為持續研究場所。"},
+    {"id":"formal","title":"公共說明與正式結構","kind":"formal","description":"介面是投影，不是另一套理論。"},
+    {"id":"experiments","title":"可檢驗的介面命題","kind":"experiments","description":"後續可比較不同網站的理解率與誤解率。"},
+    {"id":"documents","title":"正式文件","kind":"documents","description":"保留抽象論文與 Schema 規格。"},
+    {"id":"status","title":"方法論狀態","kind":"status","description":"顯示哪些已由本次雙網站生成實驗支持。"}
+  ],
+  "interactive": {
+    "type":"maturity-ladder",
+    "title":"理論介面成熟度模型",
+    "description":"成熟度提高不只增加功能，也增加治理責任。",
+    "levels":[
+      {"title":"文本存在","description":"理論只有文件或論文。","capabilities":["保存內容"],"risk":"難以接近與探索"},
+      {"title":"公開門面","description":"具有摘要、核心命題與基本導覽。","capabilities":["公開入口","基礎說明"],"risk":"門面可能過度簡化"},
+      {"title":"分層文件","description":"公共說明、正式模型與限制已分離。","capabilities":["權威分層","限制揭露"],"risk":"文件可能版本漂移"},
+      {"title":"可操作摘要","description":"加入參數、案例或互動模型。","capabilities":["操作","比較","快速理解"],"risk":"互動可能被誤認為證明"},
+      {"title":"證據介面","description":"加入實驗、失敗案例、重現材料與版本比較。","capabilities":["重現","審閱","差異追蹤"],"risk":"治理與維護成本提高"},
+      {"title":"持續研究場所","description":"成為研究、工具、社群與知識演化的共同場所。","capabilities":["持續演化","外部參與","研究工作流"],"risk":"平台治理反向支配理論"}
+    ]
+  },
+  "formal": {
+    "public_summary":["核心命題","成熟度滑桿","六個介面層級"],
+    "formal_additions":["理論集合 T=(D,A,R,E,B,V)","多個投影函數 Φ_i(T)","證據階層 L0-L6","版本與權威治理","限制與未知的強制揭露"],
+    "semantic_core":["Definition","Assumption","Rule","Evidence","Boundary","Version","Projection","Interface","Status","Governance"],
+    "formula":"T = (D, A, R, E, B, V),  Interface_i = Φ_i(T)",
+    "formula_note":"介面是理論的投影，不是理論本體的替代品。"
+  },
+  "experiments":[
+    {"id":"E-001","title":"雙網站生成","description":"同一生成器以兩份資料生成不同領域網站。","evidence_level":"L3"},
+    {"id":"E-002","title":"分層辨識測試","description":"測試讀者能否分辨展示、正式模型與證據層級。","evidence_level":"待進行"},
+    {"id":"E-003","title":"版本一致性測試","description":"比較文件、Schema 與生成網站是否產生漂移。","evidence_level":"待進行"}
+  ],
+  "documents":[
+    {"title":"理論介面化 v1.0","description":"抽象理論論文","path":"docs/Theory_Interface_Transformation_v1.0.md","role":"理論層"},
+    {"title":"Theory Interface Schema v0.1","description":"共同資料格式","path":"docs/Theory_Interface_Schema_v0.1.md","role":"規格層"}
+  ],
+  "status": {
+    "metrics":[
+      {"label":"共同 Schema","value":"1","note":"v0.1"},
+      {"label":"生成網站","value":"2","note":"不同理論"},
+      {"label":"互動模組","value":"2","note":"風險與成熟度"},
+      {"label":"外部測試","value":"0","note":"尚未開始"}
+    ],
+    "roadmap":[
+      {"title":"抽象理論論文","note":"已完成","state":"done"},
+      {"title":"共同 Schema 與生成器","note":"本次完成","state":"active"},
+      {"title":"多語言與模板系統","note":"下一階段"},
+      {"title":"文件差異檢查","note":"未開始"},
+      {"title":"大量理論網站批次生成","note":"未開始"}
+    ]
+  },
+  "limitations":["目前只用兩個案例驗證共同格式。","尚未進行真實讀者理解率測試。","生成網站不能取代正式論文與原始資料。","共同模板可能壓縮不同理論的特殊表達。"]
+}
