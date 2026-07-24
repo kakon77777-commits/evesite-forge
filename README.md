@@ -3,6 +3,8 @@
 **Schema-Driven Universal Site Generator**  
 **結構驅動的通用網站生成器**
 
+[Live site](https://kakon77777-commits.github.io/evesite-forge/) · [Theory Interface](https://kakon77777-commits.github.io/evesite-forge/sites/theory-interface/) · [GWSM](https://kakon77777-commits.github.io/evesite-forge/sites/gwsm/)
+
 EveSite Forge turns structured theories, products, documents, observatories, and site-group definitions into governed public interfaces.
 
 It began as **Theory Interface Generator v0.1** and now treats theory interfaces as the first reference site type rather than the boundary of the project.
